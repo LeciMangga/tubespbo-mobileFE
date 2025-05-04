@@ -215,9 +215,10 @@ Padding buildFasilitas(
     void Function(int) onPageChanged,
     ) {
   final imageList = [
-    'assets/images/Lobby.jpg',
-    'assets/images/parkiranMobil.jpg',
-    'assets/images/Dapur.jpg',
+    'assets/images/toilet.jpeg',
+    'assets/images/parkiran.jpeg',
+    'assets/images/lobby.jpeg',
+    'assets/images/relax.jpeg',
   ];
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: size.width * 0.07),
@@ -316,7 +317,7 @@ Padding buildFasilitas(
 Stack buildWelcome(Size size) {
   return Stack(
     children: [
-      Image.asset("assets/images/bgHomepage.png", width: size.width,),
+      ClipRRect(child: Image.asset("assets/images/bgHomepage.png", fit: BoxFit.cover,height: size.height * 0.8,)),
       Positioned.fill(
           child: Container(
             decoration: BoxDecoration(
@@ -353,7 +354,7 @@ Stack buildWelcome(Size size) {
               SizedBox(height: size.height * 0.01,),
               Text("LeciMangga Residence",
                 style: TextStyle(
-                    color: Color(0xFFA3B18A),
+                    color: Color(0xFFF6DFAA),
                     fontWeight: FontWeight.w600,
                     fontSize: 30
                 ),),

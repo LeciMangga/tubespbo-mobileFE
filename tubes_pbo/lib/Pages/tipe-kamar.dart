@@ -13,7 +13,8 @@ class tipeKamar extends StatefulWidget {
 class _tipeKamarState extends State<tipeKamar> {
 
   String? selectedHarga;
-
+  String? selectedKamar;
+  int jumlahOrang = 0;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery
@@ -27,13 +28,8 @@ class _tipeKamarState extends State<tipeKamar> {
         child: Column(
           children: [
             buildWelcomeTipeKamar(size),
-            buildFilterSearch(size,
-            (String? value) {
-                  setState(() {
-                    selectedHarga = value;
-                  });
-            }, selectedHarga
-            ),
+            buildFilterSearch(),
+            buildDetailKamar(),
           ],
         ),
       ),

@@ -3,6 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../Pages/HomePage.dart';
 import '../Pages/tipe-kamar.dart';
+import '../Pages/LocationPage.dart';
+import '../Pages/FAQPage.dart';
+import '../Pages/HubPage.dart';
 
 AppBar appBar() {
   return AppBar(
@@ -48,31 +51,24 @@ Drawer drawerMenu() {
             },
           ),
           ListTile(
-            leading: SvgPicture.asset("assets/images/iconSewa.svg"),
-            title: Text("Sewa Lapangan"),
-            onTap: () {
-
-            },
-          ),
-          ListTile(
             leading: SvgPicture.asset("assets/images/iconLokasi.svg"),
             title: Text("Lokasi"),
             onTap: () {
-
+              Get.off(() => const Locationpage());
             },
           ),
           ListTile(
             leading: SvgPicture.asset("assets/images/iconFAQ.svg"),
             title: Text("F.A.Q"),
             onTap: () {
-
+              Get.off(() => const FAQPage());
             },
           ),
           ListTile(
             leading: SvgPicture.asset("assets/images/iconHub.svg"),
             title: Text("Hubungi Kami"),
             onTap: () {
-
+              Get.off(() => const HubPage());
             },
           ),
         ],
